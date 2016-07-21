@@ -234,7 +234,10 @@ abif_fasta <- function(folder=NULL, exclude=NULL,
   }
   
   #export as one FASTA file
-  write.fasta(sequences=dseq, names=abif_files, as.string=TRUE, nbchar = 1000,
-              file.out=fname_out)
+  if(output != FALSE) {
+    write.fasta(sequences=dseq, names=abif_files, as.string=TRUE, nbchar = 1000,
+                file.out=fname_out)
+  }
+  
 }
                                                                                                 
